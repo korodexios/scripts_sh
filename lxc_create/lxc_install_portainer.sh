@@ -25,7 +25,7 @@ PORTAINER_VERSION="${PORTAINER_VERSION:-latest}"
 
 install_portainer() {
     local ctid="$1"
-    local user="kleo"
+    local user="user"
 
     echo -e "${BLUE}=== Installing Portainer in LXC $ctid ===${RESET}"
 
