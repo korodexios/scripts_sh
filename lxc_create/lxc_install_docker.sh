@@ -74,9 +74,9 @@ install_docker() {
         echo 'Docker installed successfully'
     "
 
-    # Add user to docker group (extract from LXC config, fallback to 'kleo')
+    # Add user to docker group (extract from LXC config, fallback to 'user')
     local user
-    user=$(pct config "$ctid" 2>/dev/null | grep -A1 "ssh-public-keys" | tail -1 | awk -F/ '{print $NF}' || echo "kleo")
+    user=$(pct config "$ctid" 2>/dev/null | grep -A1 "ssh-public-keys" | tail -1 | awk -F/ '{print $NF}' || echo "user")
     pct exec "$ctid" -- bash -c "usermod -aG docker $user 2>/dev/null || true"
 
     # Verify Docker is running
