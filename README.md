@@ -9,21 +9,21 @@ To use these scripts, follow the steps below to ensure they are downloaded and e
 ### 1. Clone the repository
 If you haven't already, clone this repository to your local machine:
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name/scripts_sh
+https://github.com/korodexios/lxc_create_sh.git
+cd lxc_create_sh
 ```
 
 ### 2. Set Permissions
 By default, scripts might not have execution permissions. Grant them using `chmod`:
 ```bash
-chmod +x proxmox_lxc_script.sh
+chmod +x 0_lxc_create.sh  all-lxc-update.sh  create_lxc_docker_portainer.sh lxc_create_base.sh  lxc_install_docker.sh  lxc_install_portainer.sh  lxc_module_validation.sh
 ```
 *(Repeat for any other script you wish to run.)*
 
 ### 3. Execution
 Run the scripts with root or sudo privileges (required for system-level changes):
 ```bash
-sudo ./proxmox_lxc_script.sh
+sudo ./0_lxc_create.sh
 ```
 
 ---
@@ -46,7 +46,7 @@ The main highlight of this folder is the **Proxmox LXC Super Script**. It provid
 If you need to change default settings (such as default storage, RAM, or usernames), you can easily edit the variables at the beginning of each script:
 
 ```bash
-nano proxmox_lxc_script.sh
+nano 0_lxc_create.sh
 ```
 
 Look for the section labeled `# --- Default configuration inputs ---` and modify the values to match your infrastructure.
@@ -64,5 +64,5 @@ Look for the section labeled `# --- Default configuration inputs ---` and modify
 ## 📝 License
 Feel free to use, modify, and distribute these scripts for your personal or professional projects.
 
-**Author:** Gemini & User
+**Author:** korodexios & Gemini
 **Last Updated:** 2024-08-02
