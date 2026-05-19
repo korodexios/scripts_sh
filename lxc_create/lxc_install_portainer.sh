@@ -43,7 +43,7 @@ install_portainer() {
     fi
 
     # Get username from LXC config
-    user=$(pct config "$ctid" 2>/dev/null | grep -A1 "ssh-public-keys" | tail -1 | awk -F/ '{print $NF}' || echo "kleo")
+    user=$(pct config "$ctid" 2>/dev/null | grep -A1 "ssh-public-keys" | tail -1 | awk -F/ '{print $NF}' || echo "user")
 
     echo "Installing Portainer for user: $user"
 
